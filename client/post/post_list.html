@@ -1,0 +1,22 @@
+<head>
+  <title>WEB-TITLE</title>
+</head>
+
+<body>
+  {{> postList }}
+</body>
+
+<template name="postList">
+  <table border="0" width="100%" cellspacing="1" bgcolor="#000000">
+    {{# each posts }}
+      {{> postItem }}
+    {{/ each }}
+  </table>
+</template>
+
+<template name="postItem">
+  <tr>
+    <td width="200" bgcolor="#FFFFFF">{{ title }}</td>
+    <td bgcolor="#FFFFFF">{{ href }}</td>
+  </tr>
+</template>
